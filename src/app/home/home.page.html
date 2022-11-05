@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calendar {{currentYear}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Calendar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="main-calendar">
+    <div class="day-of-week" *ngFor="let i of weekDays">
+      <span>{{i.name}}&nbsp;</span>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      {{today}}
+      {{currentDate}}
+      {{currentMonth}}
+      {{currentYear}}
+    </div>
+  </div>
+</ion-content>
